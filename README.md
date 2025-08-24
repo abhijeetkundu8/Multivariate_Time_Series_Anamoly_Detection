@@ -6,11 +6,11 @@ It identifies abnormal behavior in **multivariate time-series data** and attribu
 ---
 
 ## 📂 Files in this Project
-- **AnomalyDetection.ipynb** → Jupyter Notebook (interactive version).  
-- **AnomalyDetection.py** → Python script (standalone executable).  
+- **Multivariate_Time_Series_Anamoly_Detection.ipynb** → Jupyter Notebook (interactive version).  
+- **Multivariate_Time_Series_Anamoly_Detection.py** → Python script (standalone executable).  
 - **TEP_Train_Test.csv** → Input dataset.  
 - **TEP_with_anomaly_output.csv** → Output file with anomaly scores and top features.  
-- **Documentation.pdf** → Project explanation, methodology, and references.  
+- **Multivariate Time Series Anamoly Detection By Abhijeet Kundu.pdf** → Project explanation, methodology, and references.  
 
 ---
 
