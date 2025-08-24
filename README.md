@@ -1,100 +1,72 @@
-PCA-Based Anomaly Detection
+# PCA-Based Anomaly Detection  
 
-This project implements an anomaly detection pipeline using Principal Component Analysis (PCA).
-It identifies abnormal behavior in multivariate time-series data and attributes anomalies to the most contributing features.
+This project implements an anomaly detection pipeline using **Principal Component Analysis (PCA)**.  
+It identifies abnormal behavior in **multivariate time-series data** and attributes anomalies to the most contributing features.  
 
-📂 Files in this Project
+---
 
-AnomalyDetection.ipynb → Jupyter Notebook (interactive version of the code).
+## 📂 Files in this Project
+- **AnomalyDetection.ipynb** → Jupyter Notebook (interactive version).  
+- **AnomalyDetection.py** → Python script (standalone executable).  
+- **TEP_Train_Test.csv** → Input dataset.  
+- **TEP_with_anomaly_output.csv** → Output file with anomaly scores and top features.  
+- **Documentation.pdf** → Project explanation, methodology, and references.  
 
-AnomalyDetection.py → Python script (directly executable version).
+---
 
-TEP_Train_Test.csv → Input dataset.
+## ⚙️ Installation
+1. Make sure you have **Python 3.10+** installed.  
+2. Install dependencies using:  
+   ```bash
+   pip install numpy pandas scikit-learn
 
-TEP_with_anomaly_output.csv → Output file with anomaly scores and top features.
+  ---
 
-Documentation.pdf → Project explanation, methodology, and references.
+  ## How to Run
+**Option 1: Run the Python Script**
 
-⚙️ Installation
+1.Place AnomalyDetection.py and TEP_Train_Test.csv in the same folder.
 
-Make sure you have Python 3.10+ installed.
-Install dependencies using:
+2.Open a terminal or command prompt in that folder.
 
-pip install numpy pandas scikit-learn
+Run the script:
 
-▶️ How to Run
-Option 1: Run the Python Script
-
-Place the following files in the same folder:
-
-AnomalyDetection.py
-
-TEP_Train_Test.csv
-
-Open a terminal/command prompt in that folder.
-
-Run:
-
+```bash
 python AnomalyDetection.py
+``` 
 
 
-The script will generate:
+3.The output file TEP_with_anomaly_output.csv will be generated.
 
-TEP_with_anomaly_output.csv → containing anomaly scores and top features.
+**Option 2: Run the Jupyter Notebook**
 
-Option 2: Run the Jupyter Notebook
+1.Open Jupyter Notebook or JupyterLab.
 
-Open AnomalyDetection.ipynb in Jupyter Notebook or JupyterLab.
+2.Upload and open AnomalyDetection.ipynb.
 
-Upload the dataset (TEP_Train_Test.csv).
+3.Upload the dataset TEP_Train_Test.csv.
 
-Run all cells sequentially.
+4.Run all cells sequentially.
 
-The output file TEP_with_anomaly_output.csv will be generated.
+5.The output file TEP_with_anomaly_output.csv will be generated.
+## Conclusion
 
-📊 Output
+The PCA-based anomaly detection model successfully identifies unusual behavior in the dataset.
 
-The output CSV contains:
+It assigns an abnormality score to each timestamp and highlights the top contributing features.
 
-Abnormality_score → Score between 0–100 (higher = more abnormal).
+This approach provides both accuracy (PCA reconstruction error + Z-score) and explainability (feature attribution).
 
-top_feature_1 … top_feature_7 → Features that contributed most to the anomaly.
+---
 
-📚 References
+  ## 🚀 Future Work
 
-Step-by-Step Explanation of PCA
+Integration with real-time streaming data for online anomaly detection.
 
-PCA in Python – Datacamp
+Development of a visualization dashboard for anomaly trends and feature contributions.
 
-Anomaly Detection using PCA – Analytics Vidhya
+Hybrid approaches combining PCA with clustering or deep learning for higher accuracy.
 
-Anomaly Detection with PCA – Visual Studio Magazine
+Enhancements for large-scale datasets and distributed computation.
 
-Big Data Journal – PCA-based anomaly detection research
-
-Kaggle: PCA-based Anomaly Detection
-
-✅ Conclusion
-
-This project demonstrates the effectiveness of PCA for anomaly detection in multivariate time-series datasets.
-The approach successfully:
-
-Detects abnormal patterns in industrial process data.
-
-Assigns an interpretable Abnormality_score (0–100).
-
-Provides feature attribution by ranking the top variables that contribute to anomalies.
-
-This makes the method useful not only for detection but also for root-cause analysis in real-world scenarios.
-
-🚀 Future Work
-
-Extend the pipeline to support real-time anomaly detection on streaming data.
-
-Compare PCA with other anomaly detection techniques (Isolation Forest, Autoencoders, LSTMs).
-
-Optimize feature attribution methods to improve interpretability.
-
-Deploy as an API or dashboard for interactive anomaly monitoring.
-
-Test the framework on more diverse industrial datasets for generalization.
+Automated hyperparameter tuning for PCA components and weightings.
